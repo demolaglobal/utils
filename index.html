@@ -19,28 +19,40 @@
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css"
           integrity="sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=" rel="stylesheet"/>
     <link href="starter-template.css" rel="stylesheet">
-
-    <script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script crossorigin="anonymous" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM="
-            src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.demola.net">Demola</a>
+        <a class="navbar-brand" href="https://www.demola.net">Demola Utils</a>
     </div>
 </nav>
 
 <main class="container">
 
-    <div class="text-center py-5 px-3">
+    <h1>Demola developer tools and utilities</h1>
+    <p>If needed, contact webmaster for support.</p>
+
+    <div class="py-5 px-md-4">
+        <h3>Consolidation of attendance information</h3>
+        <div class="mb-3">
+            <label>Paste all the rows copied form the MS Teams attendance file below:</label>
+            <textarea class="form-control" id="input" required rows="5" style="font-size:0.7rem;"></textarea>
+        </div>
+        <div class="mb-3">
+            <p class="text-center">
+                Then press this button to process the information: <a id="btnProcess" class="btn btn-primary disabled" href="javascript:void(0)">Process</a>
+            </p>
+
+        </div>
     </div>
 
 </main><!-- /.container -->
 
-
+<script crossorigin="anonymous" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script crossorigin="anonymous" integrity="sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM="
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
         src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script crossorigin="anonymous" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
@@ -51,7 +63,7 @@
 <script crossorigin="anonymous"
         integrity="sha512-rMGGF4wg1R73ehtnxXBt5mbUfN9JUJwbk21KMlnLZDJh7BkPmeovBuddZCENJddHYYMkCh9hPFnPmS9sspki8g=="
         src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-
+<script src="utils.js"></script>
 
 </body>
 </html>
