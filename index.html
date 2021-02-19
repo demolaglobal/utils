@@ -39,11 +39,56 @@
             <label>Paste all the rows copied form the MS Teams attendance file below:</label>
             <textarea class="form-control" id="input" required rows="5" style="font-size:0.7rem;"></textarea>
         </div>
-        <div class="mb-3">
+        <div class="mb-5">
             <p class="text-center">
-                Then press this button to process the information: <a id="btnProcess" class="btn btn-primary disabled" href="javascript:void(0)">Process</a>
+                Then press this button to process the information: <a id="btnProcess" class="btn btn-primary disabled"
+                                                                      href="javascript:void(0)">Process</a>
             </p>
-
+        </div>
+        <div id="results" class="row" style="display: none">
+            <div class="col">
+                <div class="mb-3">
+                    <label>Adjust detected meeting start time:</label>
+                    <input class="form-control" id="meetingStart" required type="time"/>
+                    <small class="text-muted">Use the same timezone of the data pasted above</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label>Adjust detected meeting end time:</label>
+                    <input class="form-control" id="meetingEnd" required type="time"/>
+                    <small class="text-muted">Use the same timezone of the data pasted above</small>
+                </div>
+            </div>
+            <div class="col">
+                <div class="mb-3">
+                    <label>Adjust hours offset (timezone):</label>
+                    <input class="form-control" id="timeOffset" required type="number" value="0" step="1" min="-12"
+                           max="12"/>
+                    <small class="text-muted">Set this to adjust the timezone of the output below</small>
+                </div>
+            </div>
+            <div class="col-12 p-3">
+                <h4>
+                    Total of <b class="total"></b> attendees for the meeting at <b class="day"></b>, <b class="start"></b>-<b class="end"></b>:
+                </h4>
+                <p>
+                    The table below consolidates only one record per attendee name. If there are multiple records per
+                    person, the earliest is used as "Joined" time, and the latest as "Left". If records are missing, the
+                    meeting start and end times are used. You can edit the names, and copy-paste this table back in
+                    MS Excel.
+                </p>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Joined</th>
+                        <th scope="col">Left</th>
+                    </tr>
+                    </thead>
+                    <tbody id="output"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 
